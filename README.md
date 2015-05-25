@@ -50,4 +50,4 @@ To run on other platforms (Tomcat, NGINX, etc.) see the [Luminus Documention][1]
 
 ## License
 
-Copyright © 2015 FIXME
+WTFPL
