@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Page</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for page in pages %}
+    <tr>
+      <td>{{page.id}}</td>
+      <td><a href="/{{page.id}}">hillshire.tv/{{page.id}}</a></td>
+    </tr>
+  {% endfor %}
+  <tr>
+    <td>**Random**</td>
+    <td><a href="/random">hillshire.tv/random</a></td>
+  </tr>
+  </tbody>
+</table>
+<button type="button" class="btn btn-info" onclick="alert('Just ask me in chat. NoTears')">
+  Request a page
+  </button>
+{% endblock %}
