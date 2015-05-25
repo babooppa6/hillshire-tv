@@ -2,7 +2,7 @@
 -- get page from db
 SELECT "title", "type", "url"
 FROM "pages"
-WHERE lower("title") = lower(?)
+WHERE "title" = ?
 
 --name: list-pages
 -- get all pages
