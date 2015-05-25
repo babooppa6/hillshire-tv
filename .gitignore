@@ -8,4 +8,3 @@ pom.xml
 /.lein-*
 /.env
 *.log
-/src/hillshire_tv/db/core.clj

@@ -1,6 +1,7 @@
 (ns lobos.config
   (:use lobos.connectivity))
 
+;;change your database information here
 (def db
   {:classname "org.postgresql.Driver"
    :subprotocol "postgresql"
