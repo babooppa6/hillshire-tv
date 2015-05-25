@@ -47,7 +47,6 @@ To run on other platforms (Tomcat, NGINX, etc.) see the [Luminus Documention][1]
 
 [1]: http://www.luminusweb.net/docs/deployment.md
 
-
 ## License
 
 WTFPL
