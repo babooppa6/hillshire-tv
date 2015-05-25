@@ -19,8 +19,10 @@
                  [org.clojure/tools.nrepl "0.2.10"]
                  [ring-server "0.4.0"]
                  [yesql "0.4.2"]
+                 [org.clojure/java.jdbc "0.3.7"]
                  [org.postgresql/postgresql "9.4-1201-jdbc41"]
-                 [org.clojure/tools.logging "0.3.1"]]
+                 [org.clojure/tools.logging "0.3.1"]
+                 [lobos "1.0.0-beta3"]]
 
   :min-lein-version "2.0.0"
   :uberjar-name "hillshire-tv.jar"
@@ -33,8 +35,7 @@
 
   :plugins [[lein-ring "0.9.1"]
             [lein-environ "1.0.0"]
-            [lein-ancient "0.6.5"]
-            ]
+            [lein-ancient "0.6.5"]]
 
 
 
