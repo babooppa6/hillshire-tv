@@ -2,7 +2,7 @@
 -- get page from db
 SELECT title, type, url
 FROM pages
-WHERE title = :title;
+WHERE lower(title) = lower(:title);
 
 --name: list-pages
 -- get all pages
@@ -14,5 +14,5 @@ ORDER BY title ASC;
 -- select a random custom page. ORDER BY random()
 SELECT title
 FROM pages
-ORDER BY random() 
+ORDER BY random()
 limit 1;
