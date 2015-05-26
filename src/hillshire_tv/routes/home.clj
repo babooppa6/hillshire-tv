@@ -3,8 +3,7 @@
             [compojure.core :refer [defroutes GET]]
             [ring.util.http-response :refer [ok]]
             [clojure.java.io :as io]
-            [hillshire-tv.db.core :as db]
-            [clojure.pprint :refer [pprint]]))
+            [hillshire-tv.db.core :as db]))
 
 (defn list-pages []
   ;Show links to all hillshire.tv pages in a table
