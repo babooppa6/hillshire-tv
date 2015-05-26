@@ -12,7 +12,7 @@ You will need [Leiningen][1] 2.0 or above installed.
 
 ## Database
 
-This project uses PostgreSQL by default.  To use another database, change the database information appropriately in "src/lobos/config.clj" "src/hillshire_tv/db/core.clj".  Also be sure to change your database username/password in these files.
+This project uses PostgreSQL by default.  To use another database, change the database information appropriately in "src/lobos/config.clj" and "src/hillshire_tv/db/core.clj".  Also be sure to change your database username/password in these files.
 
 ### Migrations
 
