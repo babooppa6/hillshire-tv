@@ -18,7 +18,7 @@
 (defn custom-page [page]
   ;Render a page's video or image based on its content type
   (let [model (into {} (db/get-page db/db-spec page))]
-  (try (layout/render (str (get model :type) ".html") model)
+  (try (layout/render (str (:type model) ".html") model)
   (catch Exception e (route/not-found (error-page))))))
 
 (defn random-page []
