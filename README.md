@@ -6,9 +6,9 @@ Hillshire.TV is powered by The [Luminus][1] framework for Clojure.
 
 ## Prerequisites
 
-You will need [Leiningen][1] 2.0 or above installed.
+You will need [Leiningen][2] 2.0 or above installed.
 
-[1]: https://github.com/technomancy/leiningen
+[2]: https://github.com/technomancy/leiningen
 
 ## Database
 
@@ -43,9 +43,9 @@ To deploy, run the JAR file created in the "target" directory.
 
     java -jar hillshire-tv.jar
 
-To run on other platforms (Tomcat, NGINX, etc.) see the [Luminus Documention][1] for details.
+To run on other platforms (Tomcat, NGINX, etc.) see the [Luminus Documention][3] for details.
 
-[1]: http://www.luminusweb.net/docs/deployment.md
+[3]: http://www.luminusweb.net/docs/deployment.md
 
 ## License
 
