@@ -1,7 +1,7 @@
 (defproject hillshire-tv "0.1.0-SNAPSHOT"
 
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "A companion website for the destiny.gg community"
+  :url "http://hillshire.tv"
 
   :dependencies [[org.clojure/clojure "1.7.0-RC1"]
                  [selmer "0.8.2"]
