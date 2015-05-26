@@ -17,7 +17,7 @@
               response2 (app (request :get "/MoMo"))]
           (is (= 200 (:status response)))
           (is (= 200 (:status response2)))
-          (is (= (get response :body) (get response2 :body)))))
+          (is (= (:body response) (:body response2)))))
 
   (testing "not-found route"
     (let [response (app (request :get "/invalid"))]

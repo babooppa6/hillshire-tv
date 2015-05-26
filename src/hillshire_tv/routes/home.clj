@@ -24,7 +24,6 @@
 (defn random-page []
   (layout/render "random.html" (into {} (db/get-random db/db-spec))))
 
-
 (defroutes home-routes
   (GET "/" [] (list-pages))
   (GET "/about" [] (about-page))
