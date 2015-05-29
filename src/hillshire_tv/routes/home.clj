@@ -15,6 +15,8 @@
 
 (defn error-page [] (layout/render "error.html"))
 
+(defn say-page [] (layout/render "say.html"))
+
 (defn custom-page [page]
   ;Render a page's video or image based on its content type
   (let [model (into {} (db/get-page db/db-spec page))]
@@ -29,5 +31,7 @@
   (GET "/about" [] (about-page))
   (GET "/pages" [] (list-pages))
   (GET "/random" [] (random-page))
+  (GET "/say" [] (say-page))
+  (GET "/robotlady" [] (say-page))
   (GET "/:page" [page] (custom-page (str page)))
   (route/not-found (error-page)))
