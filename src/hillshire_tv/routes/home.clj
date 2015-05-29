@@ -3,6 +3,7 @@
             [compojure.core :refer [defroutes GET]]
             [compojure.route :as route]
             [ring.util.http-response :refer [ok]]
+            [ring.util.response :refer [redirect]]
             [clojure.java.io :as io]
             [hillshire-tv.db.core :as db]))
 
@@ -16,6 +17,9 @@
 (defn error-page [] (layout/render "error.html"))
 
 (defn say-page [] (layout/render "say.html"))
+
+(defn say-page-redirect [msg] (redirect
+  (str "http://translate.google.com/translate_tts?tl=en&q=" msg)))
 
 (defn custom-page [page]
   ;Render a page's video or image based on its content type
@@ -32,6 +36,8 @@
   (GET "/pages" [] (list-pages))
   (GET "/random" [] (random-page))
   (GET "/say" [] (say-page))
+  (GET "/say/:msg" [msg] (say-page-redirect (str msg)))
   (GET "/robotlady" [] (say-page))
+  (GET "/say/:msg" [msg] (say-page-redirect (str msg)))
   (GET "/:page" [page] (custom-page (str page)))
   (route/not-found (error-page)))
