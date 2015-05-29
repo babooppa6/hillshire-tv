@@ -18,7 +18,7 @@ This project uses PostgreSQL by default.  To use another database, change the da
 
 To migrate or rollback, fire up the REPL in the root directory of the project and use the (migrate) or (rollback) functions.  For example:
 
-    lein-repl
+    lein repl
 
     user=> (require '[lobos.core :refer [migrate rollback]])
     nil
