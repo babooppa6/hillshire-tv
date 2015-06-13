@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<audio id="audio" autoplay controls>
+  <source src="{{url}}" type="audio/mp3">
+  Your browser doesn't support embedded audio. NoTears
+</audio> 
+<script>document.getElementById('audio').volume = 0.5;</script>
+{% endblock %}
