@@ -1,4 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<video id="video" src="{{url}}" autoplay></video>
+<video id="video" src="{{url}}"
+ autoplay controls>
+</video>
+{{if volume}}
+<script>
+  document.getElementById('video').volume = "{{volume}}";
+</script>
+{{/if}}
 {% endblock %}

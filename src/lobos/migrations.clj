@@ -9,5 +9,6 @@
          (tbl :pages
            (varchar :title 20 :unique)
            (varchar :type 20)
-           (varchar :url 100))))
+           (varchar :url 100)
+           (varchar :volume 5))))
  (down [] (drop (table :pages))))
