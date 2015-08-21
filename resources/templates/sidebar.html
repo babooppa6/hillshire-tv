@@ -1,0 +1,16 @@
+<!--Not yet implemented -->
+
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a href="#">
+                Pages
+            </a>
+        </li>
+        {% for page in pages %}
+          <li>
+            <a href="/{{page.title}}">{{page.title}}</a>
+          </li>
+        {% endfor %}
+    </ul>
+</div>
