@@ -24,7 +24,8 @@
 (defn custom-page [page]
   ;Render a page's video or image based on its content type
   (let [model (into {} (db/get-page db/db-spec page))]
-  (try (layout/render (str (:type model) ".html") model)
+  (try 
+    (layout/render (str (:type model) ".html") model)
   (catch Exception e (route/not-found (error-page))))))
 
 (defn random-page []
@@ -39,5 +40,7 @@
   (GET "/say" [] (say-page))
   (GET "/robotlady/:msg" [msg] (say-page-redirect (str msg)))
   (GET "/robotlady" [] (say-page))
-  (GET "/:page" [page] (custom-page (str page)))
+  (GET "/:page" [page] 
+    (db/increment-views! db/db-spec page)
+    (custom-page (str page)))
   (route/not-found (error-page)))
